@@ -1,0 +1,100 @@
+.form-group {
+  width: 75%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+.form-group textarea {
+  width: 20%;
+}
+
+.form-group h1 {
+  display: inline-block;
+}
+
+.gallery-0 {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+}
+
+ul input {
+  display: none;
+}
+
+input.text {
+  display: flex;
+}
+
+label {
+  border: 1px solid #fff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+}
+label div{
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+
+label:before {
+  background-color: white;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 1px solid grey;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+}
+
+label img {
+  height: 170px;
+  
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+}
+
+:checked+label img {
+  display: none;
+}
+
+:checked+label {
+  border-color: #ddd;
+  color: rgb(110, 110, 110);
+}
+
+:checked+label:before {
+  content: "✓";
+  background-color: grey;
+  transform: scale(1);
+}
+
+:checked+label img {
+  transform: scale(0.9);
+  box-shadow: 0 0 5px #333;
+  z-index: -1;
+}
